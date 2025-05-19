@@ -5,3 +5,4 @@ numpy
 tqdm
 scikit-learn
 opencv-contrib-python
+-e .
