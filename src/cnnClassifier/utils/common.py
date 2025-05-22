@@ -7,9 +7,11 @@ import json
 import joblib
 from pathlib import Path
 import base64
-from typing import any
+from typing import Any
 from ensure import ensure_annotations
+import base64
 
+#################################################################################################################
 
 @ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
@@ -34,7 +36,8 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
         raise ValueError("Yaml file is empty")
     except Exception as e:
         raise e    
-    
+ 
+#################################################################################################################    
 
 @ensure_annotations
 def create_directories(path_to_directories: list, verbose=True) :
@@ -48,7 +51,8 @@ def create_directories(path_to_directories: list, verbose=True) :
         os.makedirs(path, exist_ok=True)
         if verbose:
             logger.info(f"created directory at : {path}")
-    
+
+#################################################################################################################    
 
 @ensure_annotations
 def save_json(path:Path, data: dict):
@@ -62,7 +66,8 @@ def save_json(path:Path, data: dict):
         json.dump(data, f, indent=4)
         
     logger.info(f"json file saved at: {path}")    
-    
+
+#################################################################################################################    
     
 @ensure_annotations
 def load_json(path: Path)-> ConfigBox:
@@ -79,4 +84,27 @@ def load_json(path: Path)-> ConfigBox:
          
     logger.info(f"json file is loaded successfully from {path}")
     return ConfigBox(content)    
-    
+
+#################################################################################################################
+
+@ensure_annotations
+def get_size(path: Path) -> str:
+    """get sie in Kb
+    Args:
+        path (Path): path of the file
+        
+    Returns:
+        str: size of the file in Kb
+    """    
+    size_in_kb = round(os.path.getzise(path)/1024)
+    return f"~{size_in_kb} Kb"
+
+#################################################################################################################
+
+def decode_image(imgstring, fileName):
+    imgdata = base64.b64decode(imgstring)
+    with open(fileName, 'wb') as f:
+        f.write(imgdata)
+        f.close()
+
+#################################################################################################################        
