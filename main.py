@@ -1,8 +1,10 @@
 from src.cnnClassifier import logger
 from cnnClassifier.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
+from cnnClassifier.pipeline.state_02_prepare_base_model import PrepareBaseModelTrainingPipeline
 
 stages ={
-    "Data Ingestion Stage": DataIngestionTrainingPipeline    
+    "Data Ingestion Stage": DataIngestionTrainingPipeline,
+    "Prepare Base Model": PrepareBaseModelTrainingPipeline    
 }
 
 #################################################################################################################
