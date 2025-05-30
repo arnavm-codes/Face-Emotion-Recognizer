@@ -1,8 +1,18 @@
-tensorflow
+tensorflow==2.19.0
 keras
-pandas
+pandas==2.2.3
 numpy
-tqdm
-scikit-learn
-opencv-contrib-python
+tqdm==4.67.1
+logger==1.4
+scikit-learn==1.6.1
+gdown==5.2.0
+opencv-contrib-python==4.11.0.86
+pyyaml
+box
+python-box
+ensure
+Flask
+Flask-Cors
+joblib
+Pillow>=9.0.0
 -e .

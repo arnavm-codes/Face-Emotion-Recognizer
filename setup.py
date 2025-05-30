@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 __version__ = "0.0.0"
 
-REPO_NAME = "Face-Emotion-Recognizer"
+REPO_NAME = "Kidney_Disease_Classification"
 AUTHOR_USER_NAME = "arnavm-codes"
 SRC_REPO = "cnnClassifier"
 AUTHOR_EMAIL = "forarnavm2004@gmail.com"

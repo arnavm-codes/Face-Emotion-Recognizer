@@ -1,7 +1,7 @@
 import os
 import zipfile
 import gdown
-import shutil
+# import shutil
 from cnnClassifier import logger
 from cnnClassifier.utils.common import get_size
 from cnnClassifier.entity.config_entity import DataIngestionConfig
