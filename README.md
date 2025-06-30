@@ -1,4 +1,4 @@
-# Kidney disease classificatin model
+# Kidney disease classification model
 
 ## Workflow
 
