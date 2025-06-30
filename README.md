@@ -1,4 +1,4 @@
-# Face-Emotion-Recognizer
+# Kidney disease classificatin model
 
 ## Workflow
 
